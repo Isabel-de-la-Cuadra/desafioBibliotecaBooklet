@@ -2,9 +2,11 @@
 	<li class="nav-item dropdown ms-4"><a class="nav-link dropdown-toggle"
 		data-bs-toggle="dropdown" style="color:Black;" href="/">Libros</a>
 		<ul class="dropdown-menu">
-			<li><a class="dropdown-item" style="color:Black;" href="book/list">Listar
+			<li><a class="dropdown-item" style="color:Black;" href="/book">Registrar
 					Libros</a></li>
-			<li><a class="dropdown-item" href="book/search">Buscar
+			<li><a class="dropdown-item" style="color:Black;" href="/book/list">Listar
+					Libros</a></li>
+			<li><a class="dropdown-item" href="/book/search">Buscar
 					Libros</a></li>
 		</ul>
 	</li>

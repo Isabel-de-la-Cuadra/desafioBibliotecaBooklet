@@ -24,7 +24,7 @@
 					<div class="card shadow-lg" id="card">
 						<div class="card-body p-3">
 							<h1 class="fs-4 card-title mb-2">Búsqueda de Libros</h1>
-							<h3 class="fs-6 fst-italic">(Buscaré los caracteres que ingreses, en el título del libro y su autor)</h3>
+							<h4 class="fs-6 fst-italic">(Buscaré coincidencias parciales, tanto en el título del libro como en el de su autor)</h4>
 							
 							<c:if test="${msgError !=null}">
 								<div class="alert alert-danger" role="alert">

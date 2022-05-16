@@ -11,6 +11,6 @@ import com.desafiolatam.models.Book;
 @Repository
 public interface BookRepository extends JpaRepository <Book, Long> {
 
-	@Query(value="SELECT * FROM bibliotecaBooklet.books b WHERE b.author LIKE '%?1%' OR b.title LIKE '%?1%'", nativeQuery=true)
+	@Query(value="SELECT * FROM bibliotecaBooklet.books bBb WHERE bBb.author LIKE "+"%"+"?1"+"%"+" OR bBb.title LIKE "+"%"+"?1"+"%", nativeQuery=true)
 	List<Book> findAllBooksByAuthorOrTitle(String search);
 }

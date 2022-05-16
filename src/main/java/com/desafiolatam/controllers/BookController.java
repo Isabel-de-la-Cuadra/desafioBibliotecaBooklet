@@ -91,24 +91,17 @@ public class BookController {
 		
 		List<Book> books = new ArrayList<Book>();
 		
-		System.out.println("inicio del método searchBook");
-		
 		if(search.isEmpty()) {
 			redirectAttributes.addFlashAttribute("msgError", "No puedo buscar si no ingresas algún dato");
 			return "redirect:search";
 		}else {
-			System.out.println("search en el else del método " + search);
 			books = bookService.searchBooks(search);
-		
-			System.out.println("books en método " + books);
 			
 			if(books.size()!=0) {
 				model.addAttribute("books", books);
-				System.out.println("books en el segundo if del método " + books);
 				redirectAttributes.addFlashAttribute("msgOk", "He encontrado los siguientes libros con los caracteres ingresados");
 				return "/searchBook.jsp";
 			}else {
-				System.out.println("En el segundo else del método ");
 				redirectAttributes.addFlashAttribute("msgError", "No he encontrado ningún libro");
 				return "redirect:search";
 			}

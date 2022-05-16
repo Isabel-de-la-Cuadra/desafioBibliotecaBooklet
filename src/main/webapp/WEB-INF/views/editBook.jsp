@@ -74,7 +74,7 @@
 
 								<div class="mb-3">
 									<form:label class="mb-1" path="available">Disponibilidad del libro</form:label>
-									<form:select class="ms-3" path="availabre">
+									<form:select class="ms-3" path="available">
 										<form:option value="true"> Disponible </form:option>
 									 	<form:option value="false">No disponible </form:option>
 									</form:select>
