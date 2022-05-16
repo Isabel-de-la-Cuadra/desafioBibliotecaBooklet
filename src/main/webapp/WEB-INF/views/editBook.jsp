@@ -44,24 +44,24 @@
 									value="" />
 								
 								<div class="mb-3">
-									<form:label class="mb-1 text-muted" path="titulo">Reingresa el Título del Libro: </form:label>
-									<form:input type="text" class="form-control" path="titulo"
+									<form:label class="mb-1 text-muted" path="title">Reingresa el Título del Libro: </form:label>
+									<form:input type="text" class="form-control" path="title"
 										value="" />
-									<form:errors path="titulo" class="text-danger" />
+									<form:errors path="title" class="text-danger" />
 								</div>
 
 								<div class="mb-3">
-									<form:label class="mb-1 text-muted" path="anio">Reingresa el Año de Publicación</form:label>
-									<form:input type="text" class="form-control" path="anio"
+									<form:label class="mb-1 text-muted" path="year">Reingresa el Año de Publicación</form:label>
+									<form:input type="text" class="form-control" path="year"
 										value="" />
-									<form:errors path="anio" class="text-danger" />
+									<form:errors path="year" class="text-danger" />
 								</div>
 
 								<div class="mb-3">
-									<form:label class="mb-1 text-muted" path="autor">Reingresa el Autor del libro</form:label>
-									<form:input type="text" class="form-control" path="autor"
+									<form:label class="mb-1 text-muted" path="author">Reingresa el Autor del libro</form:label>
+									<form:input type="text" class="form-control" path="author"
 										value=""/>
-									<form:errors path="autor" class="text-danger" />
+									<form:errors path="author" class="text-danger" />
 								</div>
 								
 								<div class="mb-3">
@@ -73,8 +73,8 @@
 								</div>
 
 								<div class="mb-3">
-									<form:label class="mb-1" path="disponible">Disponibilidad del libro</form:label>
-									<form:select class="ms-3" path="disponible">
+									<form:label class="mb-1" path="available">Disponibilidad del libro</form:label>
+									<form:select class="ms-3" path="availabre">
 										<form:option value="true"> Disponible </form:option>
 									 	<form:option value="false">No disponible </form:option>
 									</form:select>

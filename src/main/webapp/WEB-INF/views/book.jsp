@@ -44,36 +44,32 @@
 								modelAttribute="book">
 
 								<div class="mb-3">
-									<!-- <form:label class="mb-2 text-muted" path="titulo">Título del Libro: </form:label> -->
-									<form:input type="text" class="form-control" path="titulo"
+									<form:input type="text" class="form-control" path="title"
 									placeholder="Ingresa el título del libro" />
-									<form:errors path="titulo" class="text-danger" />
+									<form:errors path="title" class="text-danger" />
 								</div>
 
 								<div class="mb-3">
-									<!-- <form:label class="mb-2 text-muted" path="anio">Año de Publicación</form:label> -->
-									<form:input type="text" class="form-control" path="anio"
+									<form:input type="text" class="form-control" path="year"
 										placeholder="Ingresa el año de publicación del libro" />
-									<form:errors path="anio" class="text-danger" />
+									<form:errors path="year" class="text-danger" />
 								</div>
 
 								<div class="mb-3">
-									<!-- <form:label class="mb-2 text-muted" path="autor">Autor del libro</form:label> -->
-									<form:input type="text" class="form-control" path="autor"
+									<form:input type="text" class="form-control" path="author"
 										placeholder="Ingresa el nombre del autor del libro" />
-									<form:errors path="autor" class="text-danger" />
+									<form:errors path="author" class="text-danger" />
 								</div>
 								
 								<div class="mb-3">
-									<!-- <form:label class="mb-2 text-muted" path="editorial">Editorial del libro</form:label> -->
 									<form:input type="text" class="form-control" path="editorial"
 										placeholder="Ingresa el nombre de la editorial del libro" />
 									<form:errors path="editorial" class="text-danger" />
 								</div>
 
 								<div class="mb-3">
-									<form:label class="mb-2" path="disponible">Disponibilidad del libro</form:label>
-									<form:select class="ms-3" path="disponible">
+									<form:label class="mb-2" path="available">Disponibilidad del libro</form:label>
+									<form:select class="ms-3" path="available">
 										<form:option value="true"> Disponible </form:option>
 									 	<form:option value="false">No disponible </form:option>
 									</form:select>

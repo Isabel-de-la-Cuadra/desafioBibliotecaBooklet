@@ -7,7 +7,7 @@
 
 
 <jsp:include page='../template/header.jsp'>
-	<jsp:param name='title' value='Listar Libros:' />
+	<jsp:param name='title' value='Buscar Libros:' />
 </jsp:include>
 
 <body>
@@ -18,10 +18,41 @@
 
 	<br>
 	<br>
-	
-	<div class="container">
+
+	<div class="row justify-content-sm-center h-150">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="card shadow-lg" id="card">
+						<div class="card-body p-3">
+							<h1 class="fs-4 card-title mb-2">Búsqueda de Libros</h1>
+							<h3 class="fs-6 fst-italic">(Buscaré los caracteres que ingreses, en el título del libro y su autor)</h3>
+							
+							<c:if test="${msgError !=null}">
+								<div class="alert alert-danger" role="alert">
+									<c:out value="${msgError}"></c:out>
+								</div>
+							</c:if>
+
+							<c:if test="${msgOk !=null}">
+								<div class="alert alert-success" role="alert">
+									<c:out value="${msgOk}"></c:out>
+								</div>
+							</c:if>
+
+							<form method="POST" action="/book/search">
+								<input type="text" name="search"/>
+								<input type="submit" value="Buscar"/> 
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<br>
+	<br>
+
+<div class="container">
 	<section class="text-center">
-		<h1>Listado de Libros</h1>
+		<h1>Listado de Libros Encontrados</h1>
 	</section>
 
 	<div class="table-responsive">
@@ -38,7 +69,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="book" items="${listBooks}">
+				<c:forEach var="book" items="${books}">
 					<tr>
 						<th scope="row"><c:out value="${book.id}"></c:out></th>
 						<td><c:out value="${book.title}"></c:out></td>
@@ -63,8 +94,10 @@
 		</table>
 	</div>
 	</div>
+
+<br>
 	<br>
-	<br>
+
 
 	<jsp:include page='../template/footer.jsp'>
 		<jsp:param name='title' value='Sistema Web Biblioteca Booklet' />
@@ -76,6 +109,7 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p "
 		crossorigin="anonymous "></script>
+
 
 
 </body>

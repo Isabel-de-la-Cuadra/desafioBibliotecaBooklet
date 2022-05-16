@@ -19,36 +19,36 @@ public class Book {
 	private Long id;
 		
 	@NotNull
-	@Size(min=3, max=50, message = "Acepto títulos de libros con más de 3 caracteres" )
-	private String titulo;
+	@Size(min=3, max=50, message = "Acepto títulos de libros entre 3 y 50 caracteres" )
+	private String title;
 	
 	@NotNull
-	@Range(min=1900, message = "La fecha de publicación está fuera del rango") 
-	private Integer anio;
+	@Range(min=1900, message = "La fecha de publicación está fuera del rango, desde 1900 en adelante") 
+	private Integer year;
 	
 	@NotNull
-	@Size(min=3, max=50, message = "Acepto nombres de autor con más de 3 caracteres" )
-	private String autor;
+	@Size(min=3, max=50, message = "Acepto nombres de autor entre 3 y 50 caracteres" )
+	private String author;
 	
 	@NotNull
-	@Size(min=3, max=50, message = "Acepto nombres de editorial con más de 3 caracteres" )
+	@Size(min=3, max=50, message = "Acepto nombres de editorial entre 3 y 50 caracteres" )
 	private String editorial;
 	
 	@NotNull
-	private boolean disponible;
+	private boolean available;
 
 	public Book() {
 		super();
 	}
 
-	public Book(Long id, String titulo, Integer anio, String autor, String editorial, boolean disponible) {
+	public Book(Long id, String title, Integer year, String author, String editorial, boolean available) {
 		super();
 		this.id = id;
-		this.titulo = titulo;
-		this.anio = anio;
-		this.autor = autor;
+		this.title = title;
+		this.year = year;
+		this.author = author;
 		this.editorial = editorial;
-		this.disponible = disponible;
+		this.available = available;
 	}
 
 	public Long getId() {
@@ -59,28 +59,28 @@ public class Book {
 		this.id = id;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public Integer getAnio() {
-		return anio;
+	public Integer getYear() {
+		return year;
 	}
 
-	public void setAnio(Integer anio) {
-		this.anio = anio;
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
-	public String getAutor() {
-		return autor;
+	public String getAuthor() {
+		return author;
 	}
 
-	public void setAutor(String autor) {
-		this.autor = autor;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 	public String getEditorial() {
@@ -91,13 +91,13 @@ public class Book {
 		this.editorial = editorial;
 	}
 
-	public boolean isDisponible() {
-		return disponible;
+	public boolean isAvailable() {
+		return available;
 	}
 
-	public void setDisponible(boolean disponible) {
-		this.disponible = disponible;
+	public void setAvailable(boolean available) {
+		this.available = available;
 	}
-
+	
 }
 	

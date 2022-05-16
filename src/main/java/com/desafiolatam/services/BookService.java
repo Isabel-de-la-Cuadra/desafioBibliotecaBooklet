@@ -31,8 +31,9 @@ public class BookService {
 		return bookRepository.findById(id).get();
 	}
 	
-	public Book findBook(Long id) {
-		return bookRepository.findById(id).get();
+	public List<Book> searchBooks(String search) {
+		System.out.println("search en método searchBooks en BookService " + search);
+		return bookRepository.findAllBooksByAuthorOrTitle(search);
 	}
 
 }
